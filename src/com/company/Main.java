@@ -19,6 +19,7 @@ public class Main {
             String result;
             boolean isRoman;
             String[] operands = expression.split("[+\\-*/]");
+            if ( operands . length != 2 ) throw  new  Exception ( "Должно быть два операнда" );
             oper = Operation(expression);
             if (oper == null) throw new Exception("Неподдерживаемая математическая операция");
             if (Roman.isRoman(operands[0]) && Roman.isRoman(operands[1])) {
