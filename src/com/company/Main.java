@@ -57,21 +57,13 @@ public class Main {
             else if (expression.contains("/")) return "/";
             else return null;
         }
-        static int calculated(int a, int b, String oper) {
-          int result  = 0;
-          switch (oper){
-              case "+":
-                  result = a+b;
-              case "-":
-                  result = a-b;
-              case "*":
-                  result = a*b;
-              case "/":
-                  result = a/b;
-          }
-          return result;
-        }
-    }
+       static int calculated(int a, int b, String oper) {
+        if (oper.equals("+")) return a + b;
+        else if (oper.equals("-")) return a - b;
+        else if (oper.equals("*")) return a * b;
+        else return a / b;
+   }
+   }
     class Roman {
         static String[] romanArray = {"0", "I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX", "X", "XI",
                 "XII", "XIII", "XIV", "XV", "XVI", "XVII", "XVIII", "XIX", "XX", "XXI", "XXII", "XXIII", "XXIV",
